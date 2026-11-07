@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function About() {
   return (
-    <section id="sobre" className="bg-white py-20 sm:py-28">
+    <section id="sobre" className="bg-white py-20 sm:py-28 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <motion.div

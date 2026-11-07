@@ -7,7 +7,7 @@ import { openWhatsApp, messages } from "@/lib/whatsapp";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-navy-deep py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-navy-deep py-24 sm:py-32 scroll-mt-20">
       <div
         aria-hidden
         className="absolute inset-0 opacity-20"

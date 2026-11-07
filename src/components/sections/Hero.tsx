@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden bg-navy-deep min-h-[90vh] flex items-center"
+      className="relative isolate overflow-hidden bg-navy-deep min-h-[90vh] flex items-center scroll-mt-20"
     >
       {/* Background graphic: subtle road */}
       <div aria-hidden className="absolute inset-0 -z-10">
@@ -68,15 +68,14 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight text-white max-w-4xl"
         >
-          Seu <span className="text-gold">caminho</span> mais tranquilo no
-          trânsito começa <span className="text-gold">aqui</span>.
+          Seu caminho mais tranquilo no trânsito começa aqui.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-white/70"
+          className="mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-white/80"
         >
           Conte com orientação e atendimento especializado para questões
           relacionadas a infrações de trânsito e processos de habilitação.

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Location() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-surface py-20 sm:py-28 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>

@@ -75,7 +75,7 @@ Mensagem: ${form.message.trim() || "—"}`;
   }
 
   return (
-    <section id="contato" className="bg-surface py-20 sm:py-28">
+    <section id="contato" className="bg-surface py-20 sm:py-28 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>

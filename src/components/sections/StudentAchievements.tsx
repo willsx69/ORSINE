@@ -23,7 +23,7 @@ export function StudentAchievements() {
     <section
       id="conquistas"
       aria-labelledby="conquistas-titulo"
-      className="bg-navy-deep py-20 sm:py-28"
+      className="bg-navy-deep py-20 sm:py-28 scroll-mt-20"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
@@ -71,7 +71,7 @@ export function StudentAchievements() {
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
-                    className="object-cover transition-transform duration-300 group-hover/card:scale-[1.03]"
+                    className="object-contain transition-transform duration-300 group-hover/card:scale-[1.02]"
                   />
                 </a>
 
