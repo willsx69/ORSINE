@@ -17,27 +17,15 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-navy-deep">
-              {/* decorative grid */}
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(245,185,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(245,185,0,0.4) 1px, transparent 1px)",
-                  backgroundSize: "40px 40px",
-                }}
+            <div className="relative overflow-hidden rounded-3xl bg-navy-deep">
+              <Image
+                src="/fachada/fachada-v2.png"
+                alt="Fachada da ORSINE"
+                width={1094}
+                height={941}
+                priority
+                className="block h-auto w-full"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src="/images/logo-orsine.svg"
-                  alt="Logo ORSINE"
-                  width={260}
-                  height={260}
-                  unoptimized
-                  className="h-44 w-auto object-contain drop-shadow-2xl"
-                />
-              </div>
               {/* gold corner accent */}
               <div className="absolute bottom-0 left-0 h-24 w-24 border-b-4 border-l-4 border-gold" />
               <div className="absolute top-0 right-0 h-24 w-24 border-t-4 border-r-4 border-gold" />
