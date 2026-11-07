@@ -71,6 +71,7 @@ const localBusinessJsonLd = {
     streetAddress: "Avenida Cosme Ferreira, Zumbi dos Palmares",
     addressLocality: "Manaus",
     addressRegion: "AM",
+    postalCode: "69084-425",
     addressCountry: "BR",
   },
   areaServed: {

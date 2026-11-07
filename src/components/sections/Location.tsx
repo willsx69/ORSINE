@@ -23,7 +23,7 @@ export function Location() {
                   <p className="font-medium text-navy-deep">
                     Avenida Cosme Ferreira, Zumbi dos Palmares
                   </p>
-                  <p className="text-sm text-text-muted">Manaus — AM</p>
+                  <p className="text-sm text-text-muted">Manaus — AM · CEP 69084-425</p>
                 </div>
               </div>
               <Button

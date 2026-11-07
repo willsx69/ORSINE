@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Onde fica a ORSINE?",
-    a: "Avenida Cosme Ferreira, Zumbi dos Palmares, Manaus — AM.",
+    a: "Avenida Cosme Ferreira, Zumbi dos Palmares, Manaus — AM, CEP 69084-425.",
   },
   {
     q: "O atendimento é realizado pelo WhatsApp?",
