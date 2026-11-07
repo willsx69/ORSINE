@@ -93,6 +93,8 @@ export default function RootLayout({
       className={cn(montserrat.variable, inter.variable, "font-sans")}
     >
       <body>
+        {/* Pré-carrega a foto da hero para evitar atraso no fade-in */}
+        <link rel="preload" as="image" href="/background/hero-estrada.webp" />
         {children}
         <script
           type="application/ld+json"

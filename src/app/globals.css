@@ -47,6 +47,74 @@ h1, h2, h3, h4 {
   border-radius: 4px;
 }
 
+/* ===== Hero: estrada ao pôr do sol ===== */
+/* Fonte em alta: public/background/estrada-por-do-sol-sem-marca.png (2848×1600).
+   Para trocar a foto, gere hero-estrada.jpg/.webp a partir da nova fonte
+   (1920px de largura, q80/q78) mantendo os mesmos nomes. */
+:root {
+  /* degradê horizontal: escuro à esquerda (texto), leve à direita (sol) */
+  --hero-navy-strong: rgba(10, 22, 48, 0.9);
+  --hero-navy-mid: rgba(10, 22, 48, 0.72);
+  --hero-navy-soft: rgba(10, 22, 48, 0.25);
+  /* transição suave para a próxima seção, na base da hero */
+  --hero-edge: #061A3A;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-color: #061A3A;
+  background-image: url("/background/hero-estrada.jpg");
+  background-image: image-set(
+    url("/background/hero-estrada.webp") type("image/webp"),
+    url("/background/hero-estrada.jpg") type("image/jpeg")
+  );
+  background-size: cover;
+  background-position: center right;
+  animation: hero-photo-in 0.9s ease-out both;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 65%, var(--hero-edge) 100%),
+    linear-gradient(
+      90deg,
+      var(--hero-navy-strong) 0%,
+      var(--hero-navy-mid) 40%,
+      var(--hero-navy-soft) 100%
+    );
+}
+
+/* parallax leve apenas no desktop */
+@media (min-width: 768px) {
+  .hero-photo {
+    background-attachment: fixed;
+  }
+}
+
+/* mobile: overlay mais opaco e recorte centrado no sol */
+@media (max-width: 767px) {
+  :root {
+    --hero-navy-strong: rgba(10, 22, 48, 0.92);
+    --hero-navy-mid: rgba(10, 22, 48, 0.84);
+    --hero-navy-soft: rgba(10, 22, 48, 0.72);
+  }
+  .hero-photo {
+    background-position: 60% 30%;
+  }
+}
+
+@keyframes hero-photo-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
@@ -89,6 +157,15 @@ h1, h2, h3, h4 {
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-shine: shine var(--duration) infinite linear;
+  --animate-caret: caret-blink 1s step-end infinite;
+  @keyframes caret-blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
   @keyframes shine {
   0% {
     background-position: 0% 0%;

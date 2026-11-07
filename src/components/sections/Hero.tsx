@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin, ShieldCheck, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 import { openWhatsApp, messages } from "@/lib/whatsapp";
 
 const trust = [
@@ -15,41 +16,12 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden bg-navy-deep min-h-[90vh] flex items-center scroll-mt-20"
+      className="relative isolate overflow-hidden bg-navy-deep min-h-svh flex items-center scroll-mt-20"
     >
-      {/* Background graphic: subtle road */}
+      {/* Background: foto da estrada ao pôr do sol + overlay navy */}
       <div aria-hidden className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep via-navy to-navy-deep" />
-        <svg
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[140%] max-w-none opacity-[0.18]"
-          viewBox="0 0 1200 400"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient id="road" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#F5B900" stopOpacity="0" />
-              <stop offset="100%" stopColor="#F5B900" stopOpacity="0.9" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M520,0 L680,0 L900,400 L300,400 Z"
-            fill="none"
-            stroke="url(#road)"
-            strokeWidth="1.5"
-          />
-          <line
-            x1="600"
-            y1="0"
-            x2="600"
-            y2="400"
-            stroke="#F5B900"
-            strokeWidth="2"
-            strokeDasharray="14 18"
-            opacity="0.5"
-          />
-        </svg>
-        {/* soft gold glow */}
-        <div className="absolute -top-32 right-[-10%] h-[420px] w-[420px] rounded-full bg-gold/10 blur-3xl" />
+        <div className="hero-photo" />
+        <div className="hero-overlay" />
       </div>
 
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 py-24 sm:py-32">
@@ -66,9 +38,16 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight text-white max-w-4xl"
+          className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight text-white max-w-4xl [text-shadow:0_2px_18px_rgba(6,26,58,0.55)]"
         >
-          Seu caminho mais tranquilo no trânsito começa aqui.
+          Seu caminho mais tranquilo no trânsito
+          <br />
+          <TypingAnimation
+            as="span"
+            text="começa aqui."
+            duration={90}
+            delay={1.05}
+          />
         </motion.h1>
 
         <motion.p
