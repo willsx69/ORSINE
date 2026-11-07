@@ -110,9 +110,10 @@ Mensagem: ${form.message.trim() || "—"}`;
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   placeholder="Seu nome completo"
                   aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "name-error" : undefined}
                 />
                 {errors.name && (
-                  <p className="text-xs text-red-600">{errors.name}</p>
+                  <p id="name-error" role="alert" className="text-xs text-red-600">{errors.name}</p>
                 )}
               </div>
 
@@ -127,9 +128,10 @@ Mensagem: ${form.message.trim() || "—"}`;
                   }
                   placeholder="(92) 99999-9999"
                   aria-invalid={!!errors.phone}
+                  aria-describedby={errors.phone ? "phone-error" : undefined}
                 />
                 {errors.phone && (
-                  <p className="text-xs text-red-600">{errors.phone}</p>
+                  <p id="phone-error" role="alert" className="text-xs text-red-600">{errors.phone}</p>
                 )}
               </div>
 
@@ -141,6 +143,7 @@ Mensagem: ${form.message.trim() || "—"}`;
                   onChange={(e) => setForm({ ...form, service: e.target.value })}
                   className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
                   aria-invalid={!!errors.service}
+                  aria-describedby={errors.service ? "service-error" : undefined}
                 >
                   <option value="">Selecione uma opção</option>
                   {services.map((s) => (
@@ -150,7 +153,7 @@ Mensagem: ${form.message.trim() || "—"}`;
                   ))}
                 </select>
                 {errors.service && (
-                  <p className="mt-1.5 text-xs text-red-600">{errors.service}</p>
+                  <p id="service-error" role="alert" className="mt-1.5 text-xs text-red-600">{errors.service}</p>
                 )}
               </div>
 
@@ -176,7 +179,7 @@ Mensagem: ${form.message.trim() || "—"}`;
               </Button>
 
               {success && (
-                <div className="flex items-center gap-2 rounded-xl bg-green-50 px-4 py-3 text-sm text-green-700">
+                <div role="status" className="flex items-center gap-2 rounded-xl bg-green-50 px-4 py-3 text-sm text-green-700">
                   <CheckCircle2 className="h-4 w-4" />
                   Solicitação enviada. Abrindo o WhatsApp...
                 </div>

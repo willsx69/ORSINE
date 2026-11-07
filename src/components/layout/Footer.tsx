@@ -110,7 +110,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 border-t border-white/10 pt-6 text-xs text-white/50">
+          <p className="max-w-3xl leading-relaxed">
+            A ORSINE é uma empresa privada de orientação e intermediação, sem
+            vínculo com órgãos públicos. Não comercializamos resultados e não
+            emitimos decisões de órgãos de trânsito.
+          </p>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-4 pt-2 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} ORSINE — CNH do Brasil. Todos os direitos reservados.</p>
           <p>Manaus, Amazonas — Brasil</p>
         </div>

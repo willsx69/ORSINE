@@ -33,6 +33,14 @@ const faqs = [
     q: "O atendimento é realizado pelo WhatsApp?",
     a: "Sim. O WhatsApp é o principal canal de contato e atendimento da ORSINE.",
   },
+  {
+    q: "A ORSINE é um órgão do DETRAN ou do governo?",
+    a: "Não. A ORSINE é uma empresa privada de orientação e intermediação, sem vínculo com órgãos públicos. Os procedimentos seguem sempre as regras e etapas oficiais de cada órgão competente.",
+  },
+  {
+    q: "A ORSINE garante cancelamento de multas ou aprovação em processos?",
+    a: "Não. Nenhum resultado pode ser prometido com antecedência. O trabalho da ORSINE é orientar você com clareza sobre os procedimentos possíveis em cada caso, para que tome suas decisões bem informado.",
+  },
 ];
 
 export function FAQ() {

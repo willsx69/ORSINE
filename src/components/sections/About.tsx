@@ -43,10 +43,10 @@ export function About() {
               title="Conheça a ORSINE"
             />
             <p className="mt-6 text-base sm:text-lg leading-relaxed text-text-muted">
-              A ORSINE atua oferecendo soluções e orientação relacionadas a
-              infrações de trânsito e processos de habilitação, buscando
-              proporcionar aos clientes um atendimento acessível, claro e
-              personalizado.
+              A ORSINE atua em Manaus — AM, oferecendo soluções e orientação
+              relacionadas a infrações de trânsito e processos de habilitação,
+              buscando proporcionar aos clientes um atendimento acessível,
+              claro e personalizado.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">

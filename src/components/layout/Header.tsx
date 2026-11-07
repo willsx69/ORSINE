@@ -33,6 +33,15 @@ export function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
@@ -85,6 +94,7 @@ export function Header() {
           type="button"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
+          aria-controls="menu-mobile"
           onClick={() => setOpen((v) => !v)}
           className="md:hidden flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10"
         >
@@ -94,6 +104,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
+        id="menu-mobile"
         className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ${
           open ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
         }`}

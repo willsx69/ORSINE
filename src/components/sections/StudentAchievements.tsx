@@ -44,7 +44,7 @@ export function StudentAchievements() {
               transition={{ duration: 0.45, delay: idx * 0.06 }}
               className="h-full"
             >
-              <Card className="h-full border-[#C9A24B]/30 bg-white shadow-[0_12px_28px_-16px_rgba(6,26,58,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-18px_rgba(6,26,58,0.45)] hover:border-[#C9A24B]/60">
+              <Card className="group/card h-full border-[#C9A24B]/30 bg-white shadow-[0_12px_28px_-16px_rgba(6,26,58,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-18px_rgba(6,26,58,0.45)] hover:border-[#C9A24B]/60">
                 <CardHeader className="flex flex-row items-center gap-3">
                   <Avatar className="h-9 w-9">
                     <AvatarImage src="/images/logo-orsine.svg" alt="Logo ORSINE" />
@@ -54,7 +54,7 @@ export function StudentAchievements() {
                   </Avatar>
                   <div className="flex flex-col leading-tight">
                     <span className="text-sm font-semibold text-navy-deep">ORSINE</span>
-                    <span className="text-xs text-text-muted">Autoescola · Manaus</span>
+                    <span className="text-xs text-text-muted">CNH do Brasil · Manaus — AM</span>
                   </div>
                 </CardHeader>
 
@@ -63,7 +63,7 @@ export function StudentAchievements() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Ver post no Instagram"
-                  className="relative block aspect-[4/5] w-full overflow-hidden"
+                  className="relative block aspect-square w-full overflow-hidden"
                 >
                   <Image
                     src={item.src}
