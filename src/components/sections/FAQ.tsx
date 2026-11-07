@@ -53,10 +53,7 @@ export function FAQ() {
           align="center"
         />
 
-        <Accordion
-          defaultValue={["item-0"]}
-          className="mt-12 rounded-2xl border border-navy-deep/10 bg-surface/40 px-2"
-        >
+        <Accordion className="mt-12 rounded-2xl border border-navy-deep/10 bg-surface/40 px-2">
           {faqs.map((f, i) => (
             <AccordionItem key={f.q} value={`item-${i}`}>
               <AccordionTrigger className="px-4 text-left font-display text-base font-semibold text-navy-deep hover:text-gold-deep hover:no-underline">
